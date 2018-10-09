@@ -1,0 +1,12 @@
+3 As a dealer I want to deal cards so I can initiate a new game
+5 As a player I want to bet on my hand so I can win money
+2 As a player I want to hit so I can get closer to 21
+1 As a dealer I want to see if it's my turn so I can take my turn
+2 As a player I want to see my cards so I can make game decisions
+1 As a player I want to stand so I can avoid busting
+5 As a player I want to split so I can win more
+2 As a player I want to know if I won so I can collect my points
+2 As a player I want to be able to see how much money I have so I can make informed decisions
+1 As a house I want to know when to reshuffle so I can deal random cards
+8 As a player I want to be able to double so I can have the chance to win more money
+3 As a player I want a rulebook so I can understand the rules of the game
