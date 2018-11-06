@@ -49,7 +49,8 @@ namespace StupidBlackjackSln {
       player1.giveCard(deck.dealCard());
       showHand();
     }
-
+        List<Bitmap> bmaps = null;
+        private void form1_load(object sender, EventArgs)
     private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
       int valueAsNum;
