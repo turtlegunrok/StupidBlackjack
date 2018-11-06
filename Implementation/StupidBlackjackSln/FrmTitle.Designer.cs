@@ -98,7 +98,7 @@
       this.Controls.Add(this.btnNewGame);
       this.Controls.Add(this.lblTitle);
       this.Name = "frmTitle";
-      this.Text = "Form1";
+      this.Text = "Stupid BlackJack";
       this.Load += new System.EventHandler(this.Form1_Load);
       this.ResumeLayout(false);
       this.PerformLayout();

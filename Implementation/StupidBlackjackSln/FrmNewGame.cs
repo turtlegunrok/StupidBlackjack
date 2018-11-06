@@ -49,6 +49,10 @@ namespace StupidBlackjackSln {
       player1.giveCard(deck.dealCard());
       showHand();
     }
+    
+    private void btnStand_Click(object sender, EventArgs e) {
+            freezeLabel.Visible = true;
+        }
 
     private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
@@ -63,5 +67,10 @@ namespace StupidBlackjackSln {
 
       return (Bitmap)Resources.ResourceManager.GetObject(textName);
     }
-  }
+
+        private void lblPlayerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
