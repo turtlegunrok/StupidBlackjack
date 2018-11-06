@@ -63,5 +63,10 @@ namespace StupidBlackjackSln {
 
       return (Bitmap)Resources.ResourceManager.GetObject(textName);
     }
-  }
+
+        private void lblPlayerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
