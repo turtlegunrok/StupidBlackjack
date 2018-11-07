@@ -33,6 +33,10 @@
             this.freezeLabel = new System.Windows.Forms.Label();
             this.winLabel = new System.Windows.Forms.Label();
             this.lblPlayerScore = new System.Windows.Forms.Label();
+            this.Bets = new System.Windows.Forms.ComboBox();
+            this.BetLabel = new System.Windows.Forms.Label();
+            this.CurrentBetLabel = new System.Windows.Forms.Label();
+            this.BetAmountLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
@@ -152,11 +156,63 @@
             this.lblPlayerScore.Text = "Score";
             this.lblPlayerScore.Click += new System.EventHandler(this.lblPlayerScore_Click);
             // 
+            // Bets
+            // 
+            this.Bets.FormattingEnabled = true;
+            this.Bets.Items.AddRange(new object[] {
+            "1",
+            "5",
+            "25",
+            "50",
+            "100",
+            "500"});
+            this.Bets.Location = new System.Drawing.Point(171, 144);
+            this.Bets.Name = "Bets";
+            this.Bets.Size = new System.Drawing.Size(121, 24);
+            this.Bets.TabIndex = 31;
+            this.Bets.SelectedIndexChanged += new System.EventHandler(this.Bets_SelectedIndexChanged);
+            // 
+            // BetLabel
+            // 
+            this.BetLabel.AutoSize = true;
+            this.BetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BetLabel.Location = new System.Drawing.Point(163, 74);
+            this.BetLabel.Name = "BetLabel";
+            this.BetLabel.Size = new System.Drawing.Size(100, 46);
+            this.BetLabel.TabIndex = 32;
+            this.BetLabel.Text = "Bets";
+            this.BetLabel.Click += new System.EventHandler(this.BetLabel_Click);
+            // 
+            // CurrentBetLabel
+            // 
+            this.CurrentBetLabel.AutoSize = true;
+            this.CurrentBetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBetLabel.Location = new System.Drawing.Point(361, 74);
+            this.CurrentBetLabel.Name = "CurrentBetLabel";
+            this.CurrentBetLabel.Size = new System.Drawing.Size(214, 44);
+            this.CurrentBetLabel.TabIndex = 33;
+            this.CurrentBetLabel.Text = "Current Bet";
+            // 
+            // BetAmountLabel
+            // 
+            this.BetAmountLabel.AutoSize = true;
+            this.BetAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BetAmountLabel.Location = new System.Drawing.Point(361, 144);
+            this.BetAmountLabel.Name = "BetAmountLabel";
+            this.BetAmountLabel.Size = new System.Drawing.Size(219, 44);
+            this.BetAmountLabel.TabIndex = 34;
+            this.BetAmountLabel.Text = "Bet Amount";
+            this.BetAmountLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
             // FrmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 554);
+            this.Controls.Add(this.BetAmountLabel);
+            this.Controls.Add(this.CurrentBetLabel);
+            this.Controls.Add(this.BetLabel);
+            this.Controls.Add(this.Bets);
             this.Controls.Add(this.winLabel);
             this.Controls.Add(this.lblPlayerScore);
             this.Controls.Add(this.btnStand);
@@ -194,5 +250,9 @@
     private System.Windows.Forms.Label freezeLabel;
     private System.Windows.Forms.Label winLabel;
     private System.Windows.Forms.Label lblPlayerScore;
+    private System.Windows.Forms.ComboBox Bets;
+        private System.Windows.Forms.Label BetLabel;
+        private System.Windows.Forms.Label CurrentBetLabel;
+        private System.Windows.Forms.Label BetAmountLabel;
     }
 }
