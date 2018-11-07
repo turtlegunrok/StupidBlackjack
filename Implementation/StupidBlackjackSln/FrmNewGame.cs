@@ -71,10 +71,10 @@ namespace StupidBlackjackSln {
     
     private void btnStand_Click(object sender, EventArgs e)
         {
-            freezeLabel.Visible = true;
+            winLabel.Visible = true;
         }
 
-    private Bitmap FindBitmap(string value, string suit) {
+      private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
       int valueAsNum;
       if (int.TryParse(value, out valueAsNum)) {
@@ -89,6 +89,11 @@ namespace StupidBlackjackSln {
     }
 
         private void lblPlayerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void winLabel_Click(object sender, EventArgs e)
         {
 
         }

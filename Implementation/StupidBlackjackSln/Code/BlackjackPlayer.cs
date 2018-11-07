@@ -33,14 +33,6 @@ namespace StupidBlackjackSln.Code {
           if (this.Score > 21) {
             numAces--;
             continue;
-                        if(this.Score > 21)
-                        {
-                            ///lose
-                        }
-                        else if (this.Score < 21)
-                        {
-                            ///win
-                        }
           }
           break;
         }
