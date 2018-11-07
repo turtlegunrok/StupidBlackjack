@@ -117,10 +117,10 @@
             this.freezeLabel.AutoSize = true;
             this.freezeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.freezeLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.freezeLabel.Location = new System.Drawing.Point(1019, 411);
+            this.freezeLabel.Location = new System.Drawing.Point(819, 211);
             this.freezeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.freezeLabel.Name = "loseLabel";
-            this.freezeLabel.Size = new System.Drawing.Size(196, 42);
+            this.freezeLabel.Size = new System.Drawing.Size(392, 84);
             this.freezeLabel.TabIndex = 28;
             this.freezeLabel.Text = "You Lose!";
             this.freezeLabel.Visible = false;
