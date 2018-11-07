@@ -24,7 +24,7 @@ namespace StupidBlackjackSln {
     }
 
     private void btnExitGame_Click(object sender, EventArgs e) {
-      DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Are you sure?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+      DialogResult result = MessageBox.Show("Are you sure you want to quit the game?", "Are you sure?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
       if (result == DialogResult.Yes)
         Application.Exit();
     }

@@ -33,7 +33,8 @@ namespace StupidBlackjackSln {
     }
 
     private void showHand() {
-      for (int i = 0; i < player1.Hand.Count(); i++) {
+      for (int i = 0; i < player1.Hand.Count(); i++)
+      {
         picPlayerCards[i].BackgroundImage = player1.Hand[i].Bitmap;
       }
       lblPlayerScore.Text = player1.Score.ToString();
@@ -45,10 +46,21 @@ namespace StupidBlackjackSln {
       }
     }
 
-    private void btnHit_Click(object sender, EventArgs e) {
-      player1.giveCard(deck.dealCard());
-      showHand();
+    private void btnHit_Click(object sender, EventArgs e)
+        {
+            if (player1.Hand.Count() >= 5)
+            {
+                freezeLabel.Visible = true;
+            }
+            else if (player1.Hand.Count() < 5) {
+                player1.giveCard(deck.dealCard());
+                showHand();
+            }
     }
+    
+    private void btnStand_Click(object sender, EventArgs e) {
+            freezeLabel.Visible = true;
+        }
 
     private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
@@ -63,5 +75,10 @@ namespace StupidBlackjackSln {
 
       return (Bitmap)Resources.ResourceManager.GetObject(textName);
     }
-  }
+
+        private void lblPlayerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
