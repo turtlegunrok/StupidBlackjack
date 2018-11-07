@@ -30,10 +30,9 @@
             this.picPlayerCard5 = new System.Windows.Forms.PictureBox();
             this.btnHit = new System.Windows.Forms.Button();
             this.btnStand = new System.Windows.Forms.Button();
-            this.lblPlayerScore = new System.Windows.Forms.Label();
             this.freezeLabel = new System.Windows.Forms.Label();
             this.winLabel = new System.Windows.Forms.Label();
-            this.winLabel = new System.Windows.Forms.Label();
+            this.lblPlayerScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
@@ -115,18 +114,6 @@
             this.btnStand.UseVisualStyleBackColor = true;
             this.btnStand.Click += new System.EventHandler(this.btnStand_Click);
             // 
-            // lblPlayerScore
-            // 
-            this.lblPlayerScore.AutoSize = true;
-            this.lblPlayerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerScore.Location = new System.Drawing.Point(580, 199);
-            this.lblPlayerScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPlayerScore.Name = "lblPlayerScore";
-            this.lblPlayerScore.Size = new System.Drawing.Size(132, 46);
-            this.lblPlayerScore.TabIndex = 7;
-            this.lblPlayerScore.Text = "winLabel";
-            this.lblPlayerScore.Click += new System.EventHandler(this.lblPlayerScore_Click);
-            // 
             // freezeLabel
             // 
             this.freezeLabel.AutoSize = true;
@@ -152,7 +139,18 @@
             this.winLabel.TabIndex = 29;
             this.winLabel.Text = "You Win!";
             this.winLabel.Visible = false;
-            this.winLabel.Click += new System.EventHandler(this.winLabel_Click);
+            // 
+            // lblPlayerScore
+            // 
+            this.lblPlayerScore.AutoSize = true;
+            this.lblPlayerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerScore.Location = new System.Drawing.Point(580, 199);
+            this.lblPlayerScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlayerScore.Name = "lblPlayerScore";
+            this.lblPlayerScore.Size = new System.Drawing.Size(131, 46);
+            this.lblPlayerScore.TabIndex = 7;
+            this.lblPlayerScore.Text = "Score";
+            this.lblPlayerScore.Click += new System.EventHandler(this.lblPlayerScore_Click);
             // 
             // FrmNewGame
             // 
@@ -193,8 +191,8 @@
     private System.Windows.Forms.PictureBox picPlayerCard5;
     private System.Windows.Forms.Button btnHit;
     private System.Windows.Forms.Button btnStand;
-    private System.Windows.Forms.Label lblPlayerScore;
     private System.Windows.Forms.Label freezeLabel;
     private System.Windows.Forms.Label winLabel;
+    private System.Windows.Forms.Label lblPlayerScore;
     }
 }

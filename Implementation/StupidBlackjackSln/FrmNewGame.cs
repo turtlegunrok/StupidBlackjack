@@ -92,10 +92,5 @@ namespace StupidBlackjackSln {
         {
 
         }
-
-        private void winLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
