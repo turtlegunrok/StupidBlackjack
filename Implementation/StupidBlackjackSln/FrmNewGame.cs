@@ -14,6 +14,10 @@ namespace StupidBlackjackSln {
   public partial class FrmNewGame : Form {
     private Deck deck;
     private Player player1;
+    private Player Bot1;
+    private Player Bot2;
+    private Player Bot3;
+    private Player Bot4;
     private PictureBox[] picPlayerCards;
 
     public FrmNewGame() {
@@ -27,7 +31,6 @@ namespace StupidBlackjackSln {
     private void FrmNewGame_Load(object sender, EventArgs e) {
       deck = new Deck(FindBitmap);
       player1 = new BlackjackPlayer();
-      
       player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
       showHand();
     }

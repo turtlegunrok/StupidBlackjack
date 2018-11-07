@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{02F7C586-0E08-4E9B-8F32-571C3F73E152}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StupidBlackjackSln/Code/BlackjackBot.cs">
+    <Files>
+      <File FileName="../BlackjackPlayer.cs" Line="53" Column="22" />
+      <File FileName="StupidBlackjackSln/Code/BlackjackBot.cs" Line="64" Column="18" />
+      <File FileName="CardLib/Code/Bot.cs" Line="27" Column="1" NotebookId="1" />
+      <File FileName="StupidBlackjackSln/FrmNewGame.cs" Line="21" Column="22" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.StupidBlackjackSln PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

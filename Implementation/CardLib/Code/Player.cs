@@ -8,28 +8,18 @@ namespace StupidBlackjackSln.Code {
   public abstract class Player {
     public int Score {
       get;
-      protected set;
-    }
-
+      protected set;}
     public List<Card> Hand {
       get;
-      protected set;
-    }
-
+      protected set;}
     public Player() {
-      Score = 0;
-    }
-
+      Score = 0;}
     public void giveHand(List<Card> initHand) {
       Hand = initHand;
-      calcScore();
-    }
-
-    public void giveCard(Card card) {
+      calcScore();}
+    public void giveCard(Card card){
       Hand.Add(card);
-      calcScore();
-    }
-    
+      calcScore();}
     protected abstract void calcScore();
   }
 }
