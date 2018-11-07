@@ -124,6 +124,19 @@
             this.freezeLabel.TabIndex = 28;
             this.freezeLabel.Text = "You Lose!";
             this.freezeLabel.Visible = false;
+            //
+            // winLabel
+            //
+            this.winLabel.AutoSize = true;
+            this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.winLabel.Location = new System.Drawing.Point(819, 211);
+            this.winLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.winLabel.Name = "winLabel";
+            this.winLabel.Size = new System.Drawing.Size(392, 84);
+            this.winLabel.TabIndex = 28;
+            this.winLabel.Text = "You Win!";
+            this.winLabel.Visible = false;
             // 
             // lblPlayerScore
             // 
@@ -178,5 +191,6 @@
     private System.Windows.Forms.Button btnStand;
     private System.Windows.Forms.Label lblPlayerScore;
     private System.Windows.Forms.Label freezeLabel;
-  }
+    private System.Windows.Forms.Label winLabel;
+    }
 }
