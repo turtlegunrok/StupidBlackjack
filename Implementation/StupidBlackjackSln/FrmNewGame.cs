@@ -53,12 +53,24 @@ namespace StupidBlackjackSln {
                 freezeLabel.Visible = true;
             }
             else if (player1.Hand.Count() < 5) {
-                player1.giveCard(deck.dealCard());
-                showHand();
+                if (player1.Score <= 21)
+                {
+                    player1.giveCard(deck.dealCard());
+                    showHand();
+                    if (player1.Score > 21)
+                    {
+                        freezeLabel.Visible = true;
+                    }
+                }
+                else if (player1.Score > 21)
+                {
+                    freezeLabel.Visible = true;
+                }
             }
     }
     
-    private void btnStand_Click(object sender, EventArgs e) {
+    private void btnStand_Click(object sender, EventArgs e)
+        {
             freezeLabel.Visible = true;
         }
 
