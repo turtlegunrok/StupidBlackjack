@@ -5,3 +5,10 @@ C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\ob
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.csproj.CoreCompileInputs.cache
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.dll
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.pdb
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.xml
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.pdb
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.csprojAssemblyReference.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.pdb
