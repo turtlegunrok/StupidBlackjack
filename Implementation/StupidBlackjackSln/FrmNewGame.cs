@@ -84,6 +84,7 @@ namespace StupidBlackjackSln
       {
         picDealerCards[i].BackgroundImage = dealer.Hand[i].Bitmap;
       }
+      labelDealerScore.Text = dealer.Score.ToString();
     }
     private void showHand()
     {
@@ -179,5 +180,10 @@ namespace StupidBlackjackSln
     {
 
     }
-  }
+
+    private void labelDealerScore_Click(object sender, EventArgs e)
+    {
+
+    }
+    }
 }

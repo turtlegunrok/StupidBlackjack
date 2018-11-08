@@ -50,6 +50,8 @@
             this.picPlayerCard8 = new System.Windows.Forms.PictureBox();
             this.picPlayerCard9 = new System.Windows.Forms.PictureBox();
             this.picPlayerCard10 = new System.Windows.Forms.PictureBox();
+            this.labelDealerScore = new System.Windows.Forms.Label();
+            this.labelforDealer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
@@ -180,9 +182,8 @@
             this.Bets.Name = "Bets";
             this.Bets.Size = new System.Drawing.Size(92, 21);
             this.Bets.TabIndex = 31;
-            this.Bets.SelectedIndexChanged += new System.EventHandler(this.Bets_SelectedIndexChanged);
             this.Bets.Visible = false;
-
+            this.Bets.SelectedIndexChanged += new System.EventHandler(this.Bets_SelectedIndexChanged);
             // 
             // BetLabel
             // 
@@ -194,9 +195,8 @@
             this.BetLabel.Size = new System.Drawing.Size(80, 37);
             this.BetLabel.TabIndex = 32;
             this.BetLabel.Text = "Bets";
-            this.BetLabel.Click += new System.EventHandler(this.BetLabel_Click);
             this.BetLabel.Visible = false;
-
+            this.BetLabel.Click += new System.EventHandler(this.BetLabel_Click);
             // 
             // CurrentBetLabel
             // 
@@ -220,8 +220,8 @@
             this.BetAmountLabel.Size = new System.Drawing.Size(170, 36);
             this.BetAmountLabel.TabIndex = 34;
             this.BetAmountLabel.Text = "Bet Amount";
-            this.BetAmountLabel.Click += new System.EventHandler(this.label2_Click);
             this.BetAmountLabel.Visible = false;
+            this.BetAmountLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // picPlayerCard6
             // 
@@ -268,11 +268,34 @@
             this.picPlayerCard10.TabIndex = 39;
             this.picPlayerCard10.TabStop = false;
             // 
+            // labelDealerScore
+            // 
+            this.labelDealerScore.AutoSize = true;
+            this.labelDealerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDealerScore.Location = new System.Drawing.Point(4, 60);
+            this.labelDealerScore.Name = "labelDealerScore";
+            this.labelDealerScore.Size = new System.Drawing.Size(105, 37);
+            this.labelDealerScore.TabIndex = 40;
+            this.labelDealerScore.Text = "Score";
+            this.labelDealerScore.Click += new System.EventHandler(this.labelDealerScore_Click);
+            // 
+            // labelforDealer
+            // 
+            this.labelforDealer.AutoSize = true;
+            this.labelforDealer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelforDealer.Location = new System.Drawing.Point(4, 23);
+            this.labelforDealer.Name = "labelforDealer";
+            this.labelforDealer.Size = new System.Drawing.Size(107, 33);
+            this.labelforDealer.TabIndex = 41;
+            this.labelforDealer.Text = "Dealer";
+            // 
             // FrmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 434);
+            this.Controls.Add(this.labelforDealer);
+            this.Controls.Add(this.labelDealerScore);
             this.Controls.Add(this.picPlayerCard10);
             this.Controls.Add(this.picPlayerCard9);
             this.Controls.Add(this.picPlayerCard8);
@@ -334,5 +357,7 @@
     private System.Windows.Forms.PictureBox picPlayerCard8;
     private System.Windows.Forms.PictureBox picPlayerCard9;
     private System.Windows.Forms.PictureBox picPlayerCard10;
+        private System.Windows.Forms.Label labelDealerScore;
+        private System.Windows.Forms.Label labelforDealer;
     }
 }
