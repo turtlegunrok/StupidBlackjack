@@ -9,7 +9,7 @@ namespace StupidBlackjackSln.Code {
     protected override void calcScore() {
       this.Score = 0;
       int numAces = 0;
-      this.Bets = 0;
+     // this.Bets = 0;
       foreach (Card card in Hand) {
         int value;
         string cardValue = card.getValue();

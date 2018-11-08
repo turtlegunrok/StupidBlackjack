@@ -5,3 +5,12 @@ C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlac
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.Properties.Resources.resources
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.GenerateResource.cache
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CoreCompileInputs.cache
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.exe.config
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.exe
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.pdb
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.dll
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.pdb
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.xml
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CopyComplete
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.exe
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.pdb
