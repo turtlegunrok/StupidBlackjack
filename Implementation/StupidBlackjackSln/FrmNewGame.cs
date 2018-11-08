@@ -17,11 +17,13 @@ namespace StupidBlackjackSln
   {
     private Deck deck;
     private Player player1;
+    private Player dealer;
     private Player Bot1;
     private Player Bot2;
     private Player Bot3;
     private Player Bot4;
     private PictureBox[] picPlayerCards;
+    private PictureBox[] picDealerCards;
     public int currentCard;
 
     public FrmNewGame()
@@ -31,6 +33,14 @@ namespace StupidBlackjackSln
       timer1.Interval = 10;
       timer1.Tick += new EventHandler(Timer_Tick);
       picPlayerCards = new PictureBox[5];
+
+      picDealerCards = new PictureBox[5];
+      picDealerCards[0] = Controls.Find("picPlayerCard" + (6).ToString(), true)[0] as PictureBox;
+      picDealerCards[1] = Controls.Find("picPlayerCard" + (7).ToString(), true)[0] as PictureBox;
+      picDealerCards[2] = Controls.Find("picPlayerCard" + (8).ToString(), true)[0] as PictureBox;
+      picDealerCards[3] = Controls.Find("picPlayerCard" + (9).ToString(), true)[0] as PictureBox;
+      picDealerCards[4] = Controls.Find("picPlayerCard" + (10).ToString(), true)[0] as PictureBox;
+
       for (int i = 0; i < 5; i++)
       {
         picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
@@ -45,7 +55,7 @@ namespace StupidBlackjackSln
         int y = picPlayerCards[currentCard].Location.Y;
 
         picPlayerCards[currentCard].Location = new Point(x, y + 10);
-
+        
         if (y > 215)
         {
           currentCard += 1;
@@ -56,19 +66,25 @@ namespace StupidBlackjackSln
           timer1.Start();
         }
       }
-
     }
+        
     private void FrmNewGame_Load(object sender, EventArgs e)
     {
-      //System.Media.SoundPlayer musicplayer = new System.Media.SoundPlayer();
-      //musicplayer.SoundLocation = "Resources\bensound-thelounge.mp3";
-      //musicplayer.Play();
       deck = new Deck(FindBitmap);
+      dealer = new BlackjackPlayer();
       player1 = new BlackjackPlayer();
+      dealer.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
       player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+      showHand_Dealer();
       showHand();
     }
-
+    private void showHand_Dealer()
+    {
+      for (int i = 0; i < dealer.Hand.Count(); i++)
+      {
+        picDealerCards[i].BackgroundImage = dealer.Hand[i].Bitmap;
+      }
+    }
     private void showHand()
     {
       for (int i = 0; i < player1.Hand.Count(); i++)
@@ -97,7 +113,9 @@ namespace StupidBlackjackSln
         if (player1.Score <= 21)
         {
           player1.giveCard(deck.dealCard());
+          dealer.giveCard(deck.dealCard());
           timer1.Start();
+          showHand_Dealer();
           showHand();
           if (player1.Score > 21)
           {

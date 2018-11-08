@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 //namespace StupidBlackjackSln.Code
 //{
-//    class BlackjackDealer: Player
+//    class BlackjackDealer : Dealer
 //    {
 //        protected override void calcScore()
 //        {
