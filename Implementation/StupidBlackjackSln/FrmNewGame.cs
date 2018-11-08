@@ -9,22 +9,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace StupidBlackjackSln {
-  public partial class FrmNewGame : Form {
+
+    public partial class FrmNewGame : Form {
     private Deck deck;
     private Player player1;
     private PictureBox[] picPlayerCards;
 
     public FrmNewGame() {
-      InitializeComponent();
-      picPlayerCards = new PictureBox[5];
-      for (int i = 0; i < 5; i++) {
+            InitializeComponent();
+            timer1.Interval = 10;
+            timer1.Tick += new EventHandler(timer_Tick);
+            picPlayerCards = new PictureBox[5];
+     
+
+            for (int i = 0; i < 5; i++) {
         picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
       }
-    }
+            timer1.Start(picPlayerCard1);
+            timer1.Start(picPlayerCard2);
+        }
 
-    private void FrmNewGame_Load(object sender, EventArgs e) {
+        void timer_Tick(object sender, EventArgs e, PictureBox pictureBox)
+        {
+            int x = pictureBox.Location.X;
+            int y = pictureBox.Location.Y;
+
+            pictureBox.Location = new Point(x , y + 10 );
+            
+            if (y > 215)
+                timer1.Stop();
+        }
+
+
+        private void FrmNewGame_Load(object sender, EventArgs e) {
       deck = new Deck(FindBitmap);
       player1 = new BlackjackPlayer();
       
@@ -45,13 +65,20 @@ namespace StupidBlackjackSln {
       }
     }
 
-    private void btnHit_Click(object sender, EventArgs e) {
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnHit_Click(object sender, EventArgs e) {
       player1.giveCard(deck.dealCard());
-      showHand();
+            picPlayerCard1.Show();
+            timer1.Start();
+
+            showHand();
     }
-        List<Bitmap> bmaps = null;
-        private void form1_load(object sender, EventArgs)
-    private Bitmap FindBitmap(string value, string suit) {
+
+
+        private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
       int valueAsNum;
       if (int.TryParse(value, out valueAsNum)) {
