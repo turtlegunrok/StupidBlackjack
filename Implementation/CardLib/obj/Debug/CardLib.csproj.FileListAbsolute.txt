@@ -1,0 +1,7 @@
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.xml
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.dll
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\bin\Debug\CardLib.pdb
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.csprojResolveAssemblyReference.cache
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.csproj.CoreCompileInputs.cache
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.dll
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\CardLib\obj\Debug\CardLib.pdb

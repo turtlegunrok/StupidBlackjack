@@ -1,0 +1,7 @@
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csprojResolveAssemblyReference.cache
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.FrmNewGame.resources
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.frmTitle.resources
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.FrmRulebook.resources
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.Properties.Resources.resources
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.GenerateResource.cache
+C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CoreCompileInputs.cache

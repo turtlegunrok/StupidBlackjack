@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardLib</name>
+    </assembly>
+    <members>
+        <member name="M:StupidBlackjackSln.Code.Deck.newDeck(System.Func{System.String,System.String,System.Drawing.Bitmap})">
+            <summary>
+            Generates a new deck
+            </summary>
+        </member>
+        <member name="M:StupidBlackjackSln.Code.Deck.dealCard">
+            <summary>
+            Gives a new random card from deck
+            </summary>
+            <returns>Random card from deck</returns>
+        </member>
+    </members>
+</doc>
