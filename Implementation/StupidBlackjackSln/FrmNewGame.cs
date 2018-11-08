@@ -29,7 +29,10 @@ namespace StupidBlackjackSln {
     }
 
     private void FrmNewGame_Load(object sender, EventArgs e) {
-      deck = new Deck(FindBitmap);
+            //System.Media.SoundPlayer musicplayer = new System.Media.SoundPlayer();
+            //musicplayer.SoundLocation = "Resources\bensound-thelounge.mp3";
+            //musicplayer.Play();
+            deck = new Deck(FindBitmap);
       player1 = new BlackjackPlayer();
       player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
       showHand();
@@ -44,8 +47,10 @@ namespace StupidBlackjackSln {
     }
 
     private void FrmNewGame_FormClosed(object sender, FormClosedEventArgs e) {
-      foreach (Form f in Application.OpenForms) {
-        f.Close();
+      foreach (Form f in Application.OpenForms)
+      {
+                //Application.Exit();
+                f.Close();
       }
     }
 
@@ -110,7 +115,7 @@ namespace StupidBlackjackSln {
         {
 
         }
-
+        //Placeholder for Placing bet
         private void BetLabel_Click(object sender, EventArgs e)
         {
 

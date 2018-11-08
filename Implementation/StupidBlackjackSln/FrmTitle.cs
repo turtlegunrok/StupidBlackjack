@@ -8,16 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace StupidBlackjackSln {
-  public partial class frmTitle : Form {
-    public frmTitle() {
+  public partial class frmTitle : Form
+    {
+    WindowsMediaPlayer musicplayer = new WindowsMediaPlayer();
+        public frmTitle()
+    {
       InitializeComponent();
+      musicplayer.URL = "bensound-thelounge";
     }
 
-    private void Form1_Load(object sender, EventArgs e) {
-    }
-
+    private void Form1_Load(object sender, EventArgs e)
+        {
+            musicplayer.controls.play();
+        }
     private void btnRulebook_Click(object sender, EventArgs e) {
       FrmRulebook rulebook = new FrmRulebook();
       rulebook.Show();
