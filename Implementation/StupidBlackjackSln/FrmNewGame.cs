@@ -23,21 +23,21 @@ namespace StupidBlackjackSln {
             timer1.Interval = 10;
             timer1.Tick += new EventHandler(timer_Tick);
             picPlayerCards = new PictureBox[5];
-     
-
+   
             for (int i = 0; i < 5; i++) {
         picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
       }
-            timer1.Start(picPlayerCard1);
-            timer1.Start(picPlayerCard2);
+            timer1.Start();
+            timer1.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e, PictureBox pictureBox)
+        void timer_Tick(object sender, EventArgs e)
         {
-            int x = pictureBox.Location.X;
-            int y = pictureBox.Location.Y;
+            int i=2
+            int x = picPlayerCard[i].Location.X;
+            int y = picPlayerCard[i].Location.Y;
 
-            pictureBox.Location = new Point(x , y + 10 );
+            picPlayerCard[i].Location = new Point(x , y + 10 );
             
             if (y > 215)
                 timer1.Stop();
