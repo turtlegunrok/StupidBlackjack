@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\BlackjackPlayer.cs" />
+    <Compile Include="Code\Dealer.cs" />
     <Compile Include="FrmTitle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +72,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmNewGame.resx">
       <DependentUpon>FrmNewGame.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTitle.resx">
       <DependentUpon>FrmTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRulebook.resx">
       <DependentUpon>FrmRulebook.cs</DependentUpon>

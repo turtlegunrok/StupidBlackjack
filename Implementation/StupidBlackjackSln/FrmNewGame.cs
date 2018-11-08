@@ -56,16 +56,28 @@ namespace StupidBlackjackSln {
                 freezeLabel.Visible = true;
             }
             else if (player1.Hand.Count() < 5) {
-                player1.giveCard(deck.dealCard());
-                showHand();
+                if (player1.Score <= 21)
+                {
+                    player1.giveCard(deck.dealCard());
+                    showHand();
+                    if (player1.Score > 21)
+                    {
+                        freezeLabel.Visible = true;
+                    }
+                }
+                else if (player1.Score > 21)
+                {
+                    freezeLabel.Visible = true;
+                }
             }
     }
     
-    private void btnStand_Click(object sender, EventArgs e) {
-            freezeLabel.Visible = true;
+    private void btnStand_Click(object sender, EventArgs e)
+        {
+            winLabel.Visible = true;
         }
 
-    private Bitmap FindBitmap(string value, string suit) {
+      private Bitmap FindBitmap(string value, string suit) {
       string textName = "";
       int valueAsNum;
       if (int.TryParse(value, out valueAsNum)) {
@@ -80,6 +92,26 @@ namespace StupidBlackjackSln {
     }
 
         private void lblPlayerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BetLabel_Click(object sender, EventArgs e)
         {
 
         }
