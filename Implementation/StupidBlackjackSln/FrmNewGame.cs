@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace StupidBlackjackSln {
 
@@ -17,33 +16,41 @@ namespace StupidBlackjackSln {
     private Deck deck;
     private Player player1;
     private PictureBox[] picPlayerCards;
+    public int currentCard;
 
-    public FrmNewGame() {
+        public FrmNewGame() {
             InitializeComponent();
+            currentCard = 0;
             timer1.Interval = 10;
-            timer1.Tick += new EventHandler(timer_Tick);
+            timer1.Tick += new EventHandler(Timer_Tick);
             picPlayerCards = new PictureBox[5];
-   
+
             for (int i = 0; i < 5; i++) {
-        picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
-      }
-            timer1.Start();
-            timer1.Start();
+                picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
+            }
+
+                timer1.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e)
+        void Timer_Tick(object sender, EventArgs e)
         {
-            int i=2
-            int x = picPlayerCard[i].Location.X;
-            int y = picPlayerCard[i].Location.Y;
 
-            picPlayerCard[i].Location = new Point(x , y + 10 );
-            
+            int x = picPlayerCards[currentCard].Location.X;
+            int y = picPlayerCards[currentCard].Location.Y;
+
+            picPlayerCards[currentCard].Location = new Point(x, y + 10);
+
             if (y > 215)
+            {
+                currentCard += 1;
                 timer1.Stop();
+            }
+            if(currentCard == 1)
+            {
+                timer1.Start();
+            }
+
         }
-
-
         private void FrmNewGame_Load(object sender, EventArgs e) {
       deck = new Deck(FindBitmap);
       player1 = new BlackjackPlayer();
