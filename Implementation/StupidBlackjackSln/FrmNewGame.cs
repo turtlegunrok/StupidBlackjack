@@ -44,8 +44,11 @@ namespace StupidBlackjackSln
             {
                 int x = picPlayerCards[currentCard].Location.X;
                 int y = picPlayerCards[currentCard].Location.Y;
-                
-                picPlayerCards[currentCard].Location = new Point(x, y + 10);
+
+                if (y < 215)
+                {
+                    picPlayerCards[currentCard].Location = new Point(x, y + 10);
+                }
 
                 if (y > 215)
                 {
@@ -64,10 +67,12 @@ namespace StupidBlackjackSln
             //System.Media.SoundPlayer musicplayer = new System.Media.SoundPlayer();
             //musicplayer.SoundLocation = "Resources\bensound-thelounge.mp3";
             //musicplayer.Play();
+
             currentCard = 0;
-        deck = new Deck(FindBitmap);
+            deck = new Deck(FindBitmap);
             player1 = new BlackjackPlayer();
             player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+
             showHand();
         }
 
@@ -76,7 +81,7 @@ namespace StupidBlackjackSln
             for (int i = 0; i < player1.Hand.Count(); i++)
             {
                 picPlayerCards[i].BackgroundImage = player1.Hand[i].Bitmap;
-                
+
             }
             lblPlayerScore.Text = player1.Score.ToString();
         }
@@ -88,17 +93,21 @@ namespace StupidBlackjackSln
                 f.Close();
             }
         }
-        private void nextRound()
+        private void NextRound()
         {
             currentRound += 1;
+            currentCard = 0;
+            deck = new Deck(FindBitmap);
+            player1 = new BlackjackPlayer();
+            player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
 
+            showHand();
             for (int i = 0; i < 5; i++)
             {
-                int y = picPlayerCards[i].Location.Y;
-                    y = 0;
-               picPlayerCards[i].BackgroundImage = null;
+                picPlayerCards[currentCard].Location = new Point(picPlayerCards[currentCard].Location.X, 0);
 
             }
+            timer1.Start();
 
 
         }
@@ -108,8 +117,7 @@ namespace StupidBlackjackSln
             if (player1.Hand.Count() >= 5)
             {
                 freezeLabel.Visible = true;
-                nextRound();
-                FrmNewGame_Load(this, e);
+                NextRound();
 
 
 
@@ -125,15 +133,15 @@ namespace StupidBlackjackSln
                     if (player1.Score > 21)
                     {
                         freezeLabel.Visible = true;
-                        nextRound();
-                        FrmNewGame_Load(this, e);
+                        NextRound();
+
                     }
                 }
                 else if (player1.Score > 21)
                 {
                     freezeLabel.Visible = true;
-                    nextRound();
-                    FrmNewGame_Load(this, e);
+                    NextRound();
+
 
 
                 }
