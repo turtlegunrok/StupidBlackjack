@@ -1,4 +1,4 @@
-﻿using StupidBlackjackSln.Code;
+using StupidBlackjackSln.Code;
 using StupidBlackjackSln.Properties;
 using System;
 using System.Collections.Generic;
@@ -118,7 +118,7 @@ namespace StupidBlackjackSln
       }
       lblPlayerScore.Text = player1.Score.ToString();
     }
-
+   
     private void btnHit_Click(object sender, EventArgs e)
     {
       if (player1.Hand.Count() >= 5)
@@ -137,7 +137,6 @@ namespace StupidBlackjackSln
           {
             freezeLabel.Visible = true;
             nextRoundButton.Visible = true;
-
           }
         }
         else if (player1.Score > 21)
@@ -196,10 +195,6 @@ namespace StupidBlackjackSln
             {
                 winLabel.Visible = true;
                 nextRoundButton.Visible = true;
-            }
-            else if (dealer.Score == player1.Score)
-            {
-                //draw
             }
             else 
             {
@@ -302,3 +297,4 @@ namespace StupidBlackjackSln
         }
     }
 }
+
