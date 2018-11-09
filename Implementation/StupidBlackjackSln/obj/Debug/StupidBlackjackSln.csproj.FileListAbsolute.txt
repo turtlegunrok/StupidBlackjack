@@ -40,3 +40,24 @@ C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlac
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\Interop.WMPLib.dll
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\turtlegunrok\Documents\GitHub\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CopyComplete
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.exe.config
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.exe
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\StupidBlackjackSln.pdb
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.pdb
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\CardLib.xml
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\Interop.WMPLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csprojAssemblyReference.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\Interop.WMPLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.ResolveComReference.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.FrmNewGame.resources
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.frmTitle.resources
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.FrmRulebook.resources
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.Properties.Resources.resources
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.GenerateResource.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.csproj.CopyComplete
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.exe
+C:\Users\santi\OneDrive\Documents\CYEN 481\StupidBlackjack\StupidBlackjack\Implementation\StupidBlackjackSln\obj\Debug\StupidBlackjackSln.pdb

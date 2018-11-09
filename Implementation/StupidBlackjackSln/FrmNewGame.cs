@@ -26,6 +26,7 @@ namespace StupidBlackjackSln
     private PictureBox[] picDealerCards;
     public int currentCard;
     public int currentRound;
+    public int starting_money;
 
     public FrmNewGame()
     {
@@ -105,6 +106,8 @@ namespace StupidBlackjackSln
       player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
       showHand_Dealer();
       showHand();
+      starting_money = 1000;
+      BetAmountLabel.Text = starting_money.ToString();
     }
     private void showHand_Dealer()
     {
@@ -223,8 +226,15 @@ namespace StupidBlackjackSln
 
     private void Bets_SelectedIndexChanged(object sender, EventArgs e)
     {
-
-    }
+            CurrentBetLabel.Text = 0.ToString();
+            string var;
+            int currentbet;
+            var = Bets.Text;
+            currentbet = Convert.ToInt32(Bets.Text);
+            starting_money = starting_money - currentbet;
+            CurrentBetLabel.Text = var.ToString();
+            BetAmountLabel.Text = starting_money.ToString();
+        }
 
     private void label2_Click(object sender, EventArgs e)
     {
