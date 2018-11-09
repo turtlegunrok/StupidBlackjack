@@ -106,7 +106,7 @@ namespace StupidBlackjackSln
         f.Close();
       }
     }
-
+     
     private void btnHit_Click(object sender, EventArgs e)
     {
       if (player1.Hand.Count() >= 5)
