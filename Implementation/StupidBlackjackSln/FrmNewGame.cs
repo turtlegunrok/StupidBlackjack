@@ -29,6 +29,7 @@ namespace StupidBlackjackSln
         {
             InitializeComponent();
             currentCard = 0;
+            currentRound = 1;
             timer1.Interval = 10;
             timer1.Tick += new EventHandler(Timer_Tick);
             picPlayerCards = new PictureBox[5];
@@ -96,10 +97,11 @@ namespace StupidBlackjackSln
         }
         private void NextRound()
         {
-            label2.Text = "Round" + currentRound;
-            nextRoundButton.Visible = false;
             currentRound += 1;
+            label2.Text = "Round:" + currentRound.ToString();
+            nextRoundButton.Visible = false;
             currentCard = 0;
+
             picPlayerCards = null;
             deck = new Deck(FindBitmap);
             player1 = new BlackjackPlayer();
@@ -124,7 +126,8 @@ namespace StupidBlackjackSln
             if (player1.Hand.Count() >= 5)
             {
                 freezeLabel.Visible = true;
- 
+                nextRoundButton.Visible = true;
+
 
 
 
@@ -140,17 +143,9 @@ namespace StupidBlackjackSln
                     if (player1.Score > 21)
                     {
                         freezeLabel.Visible = true;
-
+                        nextRoundButton.Visible = true;
 
                     }
-                }
-                else if (player1.Score > 21)
-                {
-                    freezeLabel.Visible = true;
-
-
-
-
                 }
             }
         }

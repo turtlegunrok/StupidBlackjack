@@ -229,6 +229,7 @@
             this.nextRoundButton.TabIndex = 37;
             this.nextRoundButton.Text = "Next Round";
             this.nextRoundButton.UseVisualStyleBackColor = true;
+            this.nextRoundButton.Visible = false;
             this.nextRoundButton.Click += new System.EventHandler(this.nextRoundButton_Click);
             // 
             // FrmNewGame
