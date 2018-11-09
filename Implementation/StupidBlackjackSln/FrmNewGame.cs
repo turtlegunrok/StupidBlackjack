@@ -54,7 +54,8 @@ namespace StupidBlackjackSln
       if (currentCard < 5)
       {
         picPlayerCards[currentCard].Visible = true;
-        int x = picPlayerCards[currentCard].Location.X;
+        picDealerCards[currentCard].Visible = true;
+                int x = picPlayerCards[currentCard].Location.X;
         int y = picPlayerCards[currentCard].Location.Y;
 
         if (y < 215)
@@ -69,9 +70,16 @@ namespace StupidBlackjackSln
             picPlayerCards[i].BackgroundImage = player1.Hand[i].Bitmap;
 
           }
-          lblPlayerScore.Text = player1.Score.ToString();
+                    currentCard += 1;
+                    timer1.Stop();
+                   
+                    lblPlayerScore.Text = player1.Score.ToString();
         }
-      }
+                if (currentCard == 1)
+                {
+                    timer1.Start();
+                }
+            }
     }
 
     private void FrmNewGame_FormClosed(object sender, FormClosedEventArgs e)
@@ -86,7 +94,7 @@ namespace StupidBlackjackSln
     private void FrmNewGame_Load(object sender, EventArgs e)
     {
       currentCard = 0;
-      ddeck = new Deck(FindBitmap);
+      deck = new Deck(FindBitmap);
       dealer = new BlackjackBot();
       Bot1 = new BlackjackBot();
       Bot2 = new BlackjackBot();
@@ -113,14 +121,6 @@ namespace StupidBlackjackSln
         picPlayerCards[i].BackgroundImage = player1.Hand[i].Bitmap;
       }
       lblPlayerScore.Text = player1.Score.ToString();
-    }
-
-    private void FrmNewGame_FormClosed(object sender, FormClosedEventArgs e)
-    {
-      foreach (Form f in Application.OpenForms)
-      {
-        f.Close();
-      }
     }
 
     private void btnHit_Click(object sender, EventArgs e)
@@ -155,25 +155,37 @@ namespace StupidBlackjackSln
     }
     private void NextRound()
     {
+
       currentRound += 1;
       label2.Text = "Round:" + currentRound.ToString();
       nextRoundButton.Visible = false;
       currentCard = 0;
-
-      picPlayerCards = null;
+            picPlayerCards = null;
       deck = new Deck(FindBitmap);
-      player1 = new BlackjackPlayer();
-      player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
-      picPlayerCards = new PictureBox[5];
+            dealer = new BlackjackBot();
 
-      for (int i = 0; i < 5; i++)
+            player1 = new BlackjackPlayer();
+            dealer.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+            player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+      picPlayerCards = new PictureBox[5];
+            picDealerCards = new PictureBox[5];
+            picDealerCards[0] = Controls.Find("picPlayerCard" + (6).ToString(), true)[0] as PictureBox;
+            picDealerCards[1] = Controls.Find("picPlayerCard" + (7).ToString(), true)[0] as PictureBox;
+            picDealerCards[2] = Controls.Find("picPlayerCard" + (8).ToString(), true)[0] as PictureBox;
+            picDealerCards[3] = Controls.Find("picPlayerCard" + (9).ToString(), true)[0] as PictureBox;
+            picDealerCards[4] = Controls.Find("picPlayerCard" + (10).ToString(), true)[0] as PictureBox;
+
+
+            for (int i = 0; i < 5; i++)
       {
-        picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
+                picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
         picPlayerCards[i].Location = new Point(picPlayerCards[i].Location.X, 0);
         picPlayerCards[i].Visible = false;
+                picDealerCards[i].Visible = false;
       }
       showHand();
-      timer1.Start();
+            showHand_Dealer();
+            timer1.Start();
 
 
     }
