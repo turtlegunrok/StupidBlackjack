@@ -25,11 +25,13 @@ namespace StupidBlackjackSln
     private PictureBox[] picPlayerCards;
     private PictureBox[] picDealerCards;
     public int currentCard;
+    public int currentRound;
 
     public FrmNewGame()
     {
       InitializeComponent();
       currentCard = 0;
+      currentRound = 1;
       timer1.Interval = 10;
       timer1.Tick += new EventHandler(Timer_Tick);
       picPlayerCards = new PictureBox[5];
@@ -51,25 +53,39 @@ namespace StupidBlackjackSln
     {
       if (currentCard < 5)
       {
+        picPlayerCards[currentCard].Visible = true;
         int x = picPlayerCards[currentCard].Location.X;
         int y = picPlayerCards[currentCard].Location.Y;
 
-        picPlayerCards[currentCard].Location = new Point(x, y + 10);
-        
+        if (y < 215)
+        {
+          picPlayerCards[currentCard].Location = new Point(x, y + 10);
+        }
+
         if (y > 215)
         {
-          currentCard += 1;
-          timer1.Stop();
-        }
-        if (currentCard == 1)
-        {
-          timer1.Start();
+          for (int i = 0; i < player1.Hand.Count(); i++)
+          {
+            picPlayerCards[i].BackgroundImage = player1.Hand[i].Bitmap;
+
+          }
+          lblPlayerScore.Text = player1.Score.ToString();
         }
       }
     }
-        
+
+    private void FrmNewGame_FormClosed(object sender, FormClosedEventArgs e)
+    {
+      foreach (Form f in Application.OpenForms)
+      {
+        f.Close();
+      }
+    }
+
+
     private void FrmNewGame_Load(object sender, EventArgs e)
     {
+      currentCard = 0;
       ddeck = new Deck(FindBitmap);
       dealer = new BlackjackBot();
       Bot1 = new BlackjackBot();
@@ -106,12 +122,13 @@ namespace StupidBlackjackSln
         f.Close();
       }
     }
-     
+
     private void btnHit_Click(object sender, EventArgs e)
     {
       if (player1.Hand.Count() >= 5)
       {
         freezeLabel.Visible = true;
+        nextRoundButton.Visible = true;
       }
       else if (player1.Hand.Count() < 5)
       {
@@ -125,13 +142,40 @@ namespace StupidBlackjackSln
           if (player1.Score > 21)
           {
             freezeLabel.Visible = true;
+            nextRoundButton.Visible = true;
+
           }
         }
         else if (player1.Score > 21)
         {
           freezeLabel.Visible = true;
+          nextRoundButton.Visible = true;
         }
       }
+    }
+    private void NextRound()
+    {
+      currentRound += 1;
+      label2.Text = "Round:" + currentRound.ToString();
+      nextRoundButton.Visible = false;
+      currentCard = 0;
+
+      picPlayerCards = null;
+      deck = new Deck(FindBitmap);
+      player1 = new BlackjackPlayer();
+      player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+      picPlayerCards = new PictureBox[5];
+
+      for (int i = 0; i < 5; i++)
+      {
+        picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
+        picPlayerCards[i].Location = new Point(picPlayerCards[i].Location.X, 0);
+        picPlayerCards[i].Visible = false;
+      }
+      showHand();
+      timer1.Start();
+
+
     }
 
     private void btnStand_Click(object sender, EventArgs e)
@@ -185,9 +229,34 @@ namespace StupidBlackjackSln
 
     }
 
+    private void label1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label2_Click_1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void winLabel_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void picPlayerCard5_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void nextRoundButton_Click(object sender, EventArgs e)
+    {
+      NextRound();
+    }
+
     private void labelDealerScore_Click(object sender, EventArgs e)
     {
 
     }
-    }
+  }
 }

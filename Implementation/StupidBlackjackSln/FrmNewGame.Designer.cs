@@ -44,6 +44,7 @@
             this.CurrentBetLabel = new System.Windows.Forms.Label();
             this.BetAmountLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+<<<<<<< HEAD
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.picPlayerCard6 = new System.Windows.Forms.PictureBox();
             this.picPlayerCard7 = new System.Windows.Forms.PictureBox();
@@ -52,16 +53,23 @@
             this.picPlayerCard10 = new System.Windows.Forms.PictureBox();
             this.labelDealerScore = new System.Windows.Forms.Label();
             this.labelforDealer = new System.Windows.Forms.Label();
+=======
+            this.label2 = new System.Windows.Forms.Label();
+            this.nextRoundButton = new System.Windows.Forms.Button();
+>>>>>>> newround
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard5)).BeginInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard10)).BeginInit();
+=======
+>>>>>>> newround
             this.SuspendLayout();
             // 
             // picPlayerCard1
@@ -109,6 +117,10 @@
             this.picPlayerCard5.Size = new System.Drawing.Size(84, 128);
             this.picPlayerCard5.TabIndex = 4;
             this.picPlayerCard5.TabStop = false;
+<<<<<<< HEAD
+=======
+            this.picPlayerCard5.Click += new System.EventHandler(this.picPlayerCard5_Click);
+>>>>>>> newround
             // 
             // btnHit
             // 
@@ -155,6 +167,10 @@
             this.winLabel.TabIndex = 29;
             this.winLabel.Text = "You Win!";
             this.winLabel.Visible = false;
+<<<<<<< HEAD
+=======
+            this.winLabel.Click += new System.EventHandler(this.winLabel_Click);
+>>>>>>> newround
             // 
             // lblPlayerScore
             // 
@@ -177,12 +193,19 @@
             "50",
             "100",
             "500"});
+<<<<<<< HEAD
             this.Bets.Location = new System.Drawing.Point(11, 152);
+=======
+            this.Bets.Location = new System.Drawing.Point(128, 117);
+>>>>>>> newround
             this.Bets.Margin = new System.Windows.Forms.Padding(2);
             this.Bets.Name = "Bets";
             this.Bets.Size = new System.Drawing.Size(92, 21);
             this.Bets.TabIndex = 31;
+<<<<<<< HEAD
             this.Bets.Visible = false;
+=======
+>>>>>>> newround
             this.Bets.SelectedIndexChanged += new System.EventHandler(this.Bets_SelectedIndexChanged);
             // 
             // BetLabel
@@ -195,31 +218,46 @@
             this.BetLabel.Size = new System.Drawing.Size(80, 37);
             this.BetLabel.TabIndex = 32;
             this.BetLabel.Text = "Bets";
+<<<<<<< HEAD
             this.BetLabel.Visible = false;
+=======
+>>>>>>> newround
             this.BetLabel.Click += new System.EventHandler(this.BetLabel_Click);
             // 
             // CurrentBetLabel
             // 
             this.CurrentBetLabel.AutoSize = true;
             this.CurrentBetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.CurrentBetLabel.Location = new System.Drawing.Point(5, 211);
+=======
+            this.CurrentBetLabel.Location = new System.Drawing.Point(271, 60);
+>>>>>>> newround
             this.CurrentBetLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CurrentBetLabel.Name = "CurrentBetLabel";
             this.CurrentBetLabel.Size = new System.Drawing.Size(166, 36);
             this.CurrentBetLabel.TabIndex = 33;
             this.CurrentBetLabel.Text = "Current Bet";
+<<<<<<< HEAD
             this.CurrentBetLabel.Visible = false;
+=======
+>>>>>>> newround
             // 
             // BetAmountLabel
             // 
             this.BetAmountLabel.AutoSize = true;
             this.BetAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BetAmountLabel.Location = new System.Drawing.Point(175, 211);
+=======
+            this.BetAmountLabel.Location = new System.Drawing.Point(271, 117);
+>>>>>>> newround
             this.BetAmountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BetAmountLabel.Name = "BetAmountLabel";
             this.BetAmountLabel.Size = new System.Drawing.Size(170, 36);
             this.BetAmountLabel.TabIndex = 34;
             this.BetAmountLabel.Text = "Bet Amount";
+<<<<<<< HEAD
             this.BetAmountLabel.Visible = false;
             this.BetAmountLabel.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -288,12 +326,38 @@
             this.labelforDealer.Size = new System.Drawing.Size(107, 33);
             this.labelforDealer.TabIndex = 41;
             this.labelforDealer.Text = "Dealer";
+=======
+            this.BetAmountLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(435, 388);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 37);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Round: 1";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // nextRoundButton
+            // 
+            this.nextRoundButton.Location = new System.Drawing.Point(458, 326);
+            this.nextRoundButton.Name = "nextRoundButton";
+            this.nextRoundButton.Size = new System.Drawing.Size(103, 49);
+            this.nextRoundButton.TabIndex = 37;
+            this.nextRoundButton.Text = "Next Round";
+            this.nextRoundButton.UseVisualStyleBackColor = true;
+            this.nextRoundButton.Visible = false;
+            this.nextRoundButton.Click += new System.EventHandler(this.nextRoundButton_Click);
+>>>>>>> newround
             // 
             // FrmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 434);
+<<<<<<< HEAD
             this.Controls.Add(this.labelforDealer);
             this.Controls.Add(this.labelDealerScore);
             this.Controls.Add(this.picPlayerCard10);
@@ -301,6 +365,10 @@
             this.Controls.Add(this.picPlayerCard8);
             this.Controls.Add(this.picPlayerCard7);
             this.Controls.Add(this.picPlayerCard6);
+=======
+            this.Controls.Add(this.nextRoundButton);
+            this.Controls.Add(this.label2);
+>>>>>>> newround
             this.Controls.Add(this.BetAmountLabel);
             this.Controls.Add(this.CurrentBetLabel);
             this.Controls.Add(this.BetLabel);
@@ -324,11 +392,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard5)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard10)).EndInit();
+=======
+>>>>>>> newround
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,6 +422,7 @@
     private System.Windows.Forms.Label CurrentBetLabel;
     private System.Windows.Forms.Label BetAmountLabel;
     private System.Windows.Forms.Timer timer1;
+<<<<<<< HEAD
     private System.Windows.Forms.Timer timer2;
     private System.Windows.Forms.PictureBox picPlayerCard6;
     private System.Windows.Forms.PictureBox picPlayerCard7;
@@ -359,5 +431,9 @@
     private System.Windows.Forms.PictureBox picPlayerCard10;
         private System.Windows.Forms.Label labelDealerScore;
         private System.Windows.Forms.Label labelforDealer;
+=======
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button nextRoundButton;
+>>>>>>> newround
     }
 }

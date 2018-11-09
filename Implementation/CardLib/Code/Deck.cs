@@ -42,7 +42,10 @@ namespace StupidBlackjackSln.Code {
     /// </summary>
     /// <returns>Random card from deck</returns>
     public Card dealCard() {
-      int cardIndex = rand.Next(cards.Count) - 1;
+      int cardIndex = rand.Next(cards.Count);
+                if(cardIndex - 1 >= 0){
+                cardIndex -= 1;
+};
       Card card = cards[cardIndex];
       cards.RemoveAt(cardIndex);
       return card;
