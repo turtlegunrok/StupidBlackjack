@@ -188,7 +188,26 @@ namespace StupidBlackjackSln
 
     private void btnStand_Click(object sender, EventArgs e)
     {
-      winLabel.Visible = true;
+            //dealer.takeTurn();
+            if (player1.Score > dealer.Score)
+            {
+                winLabel.Visible = true;
+                nextRoundButton.Visible = true;
+            }
+            else if (dealer.Score > 21)
+            {
+                winLabel.Visible = true;
+                nextRoundButton.Visible = true;
+            }
+            else if (dealer.Score == player1.Score)
+            {
+                //draw
+            }
+            else 
+            {
+                freezeLabel.Visible = true;
+                nextRoundButton.Visible = true;
+            }
     }
 
     private Bitmap FindBitmap(string value, string suit)
