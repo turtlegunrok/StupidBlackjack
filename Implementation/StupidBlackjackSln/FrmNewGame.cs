@@ -131,9 +131,7 @@ namespace StupidBlackjackSln
         if (player1.Score <= 21)
         {
           player1.giveCard(deck.dealCard());
-          dealer.giveCard(deck.dealCard());
           timer1.Start();
-          showHand_Dealer();
           showHand();
           if (player1.Score > 21)
           {
