@@ -185,7 +185,7 @@ namespace StupidBlackjackSln
 
     private void btnStand_Click(object sender, EventArgs e)
     {
-            //dealer.takeTurn();
+            dealerTurn();
             if (player1.Score > dealer.Score)
             {
                 winLabel.Visible = true;
@@ -217,6 +217,29 @@ namespace StupidBlackjackSln
       textName += suit;
 
       return (Bitmap)Resources.ResourceManager.GetObject(textName);
+    }
+
+    private void dealerTurn()
+    {
+        Boolean done = false;
+        if (dealer.Score == 21)
+        {
+            //Blackjack
+        }
+        else
+            while (done != true)
+            {
+                if (dealer.Score < 16)
+                {
+                    dealer.giveCard(deck.dealCard());
+                }
+                else
+                {
+                    done = true;
+                }
+                showHand_Dealer();
+            }
+      showHand_Dealer();
     }
 
     private void lblPlayerScore_Click(object sender, EventArgs e)
