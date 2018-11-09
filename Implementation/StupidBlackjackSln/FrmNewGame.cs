@@ -42,6 +42,7 @@ namespace StupidBlackjackSln
         {
             if (currentCard < 5)
             {
+                picPlayerCards[currentCard].Visible = true;
                 int x = picPlayerCards[currentCard].Location.X;
                 int y = picPlayerCards[currentCard].Location.Y;
 
@@ -97,16 +98,21 @@ namespace StupidBlackjackSln
         {
             currentRound += 1;
             currentCard = 0;
+            picPlayerCards = null;
+
             deck = new Deck(FindBitmap);
             player1 = new BlackjackPlayer();
             player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
+            picPlayerCards = new PictureBox[5];
 
-            showHand();
             for (int i = 0; i < 5; i++)
             {
-                picPlayerCards[currentCard].Location = new Point(picPlayerCards[currentCard].Location.X, 0);
-
+                picPlayerCards[i] = Controls.Find("picPlayerCard" + (i + 1).ToString(), true)[0] as PictureBox;
+                picPlayerCards[i].Location = new Point(picPlayerCards[i].Location.X, 0);
+                picPlayerCards[i].Visible = false;
             }
+            Console.WriteLine(player1.Hand.Count());
+            showHand();
             timer1.Start();
 
 
@@ -210,6 +216,11 @@ namespace StupidBlackjackSln
         }
 
         private void winLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picPlayerCard5_Click(object sender, EventArgs e)
         {
 
         }

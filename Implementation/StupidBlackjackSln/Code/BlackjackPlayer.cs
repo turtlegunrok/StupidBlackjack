@@ -8,6 +8,10 @@ namespace StupidBlackjackSln.Code
 {
   class BlackjackPlayer : Player
   {
+    public  void ResetHand()
+        {
+            Hand = null;
+        }
     protected override void calcScore()
     {
       this.Score = 0;

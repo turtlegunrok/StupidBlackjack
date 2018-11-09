@@ -98,6 +98,7 @@
             this.picPlayerCard5.Size = new System.Drawing.Size(84, 128);
             this.picPlayerCard5.TabIndex = 4;
             this.picPlayerCard5.TabStop = false;
+            this.picPlayerCard5.Click += new System.EventHandler(this.picPlayerCard5_Click);
             // 
             // btnHit
             // 
