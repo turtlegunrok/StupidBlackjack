@@ -108,6 +108,7 @@ namespace StupidBlackjackSln
       showHand();
       starting_money = 1000;
       BetAmountLabel.Text = starting_money.ToString();
+      CurrentBetLabel.Text = 0.ToString();
     }
     private void showHand_Dealer()
     {
@@ -280,5 +281,15 @@ namespace StupidBlackjackSln
     {
 
     }
-  }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MoneyLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

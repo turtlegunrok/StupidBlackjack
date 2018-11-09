@@ -54,6 +54,9 @@
             this.labelforDealer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nextRoundButton = new System.Windows.Forms.Button();
+            this.PickBetLablel = new System.Windows.Forms.Label();
+            this.CurrentBetLabelTxt = new System.Windows.Forms.Label();
+            this.MoneyLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
@@ -214,7 +217,7 @@
             // 
             this.BetAmountLabel.AutoSize = true;
             this.BetAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BetAmountLabel.Location = new System.Drawing.Point(797, 354);
+            this.BetAmountLabel.Location = new System.Drawing.Point(797, 372);
             this.BetAmountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BetAmountLabel.Name = "BetAmountLabel";
             this.BetAmountLabel.Size = new System.Drawing.Size(170, 36);
@@ -310,11 +313,46 @@
             this.nextRoundButton.Visible = false;
             this.nextRoundButton.Click += new System.EventHandler(this.nextRoundButton_Click);
             // 
+            // PickBetLablel
+            // 
+            this.PickBetLablel.AutoSize = true;
+            this.PickBetLablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickBetLablel.Location = new System.Drawing.Point(699, 211);
+            this.PickBetLablel.Name = "PickBetLablel";
+            this.PickBetLablel.Size = new System.Drawing.Size(196, 24);
+            this.PickBetLablel.TabIndex = 42;
+            this.PickBetLablel.Text = "Choose Bet Amount";
+            // 
+            // CurrentBetLabelTxt
+            // 
+            this.CurrentBetLabelTxt.AutoSize = true;
+            this.CurrentBetLabelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBetLabelTxt.Location = new System.Drawing.Point(780, 280);
+            this.CurrentBetLabelTxt.Name = "CurrentBetLabelTxt";
+            this.CurrentBetLabelTxt.Size = new System.Drawing.Size(115, 24);
+            this.CurrentBetLabelTxt.TabIndex = 43;
+            this.CurrentBetLabelTxt.Text = "Current Bet";
+            this.CurrentBetLabelTxt.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // MoneyLabel
+            // 
+            this.MoneyLabel.AutoSize = true;
+            this.MoneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneyLabel.Location = new System.Drawing.Point(780, 340);
+            this.MoneyLabel.Name = "MoneyLabel";
+            this.MoneyLabel.Size = new System.Drawing.Size(56, 24);
+            this.MoneyLabel.TabIndex = 44;
+            this.MoneyLabel.Text = "Bank";
+            this.MoneyLabel.Click += new System.EventHandler(this.MoneyLabel_Click);
+            // 
             // FrmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 434);
+            this.Controls.Add(this.MoneyLabel);
+            this.Controls.Add(this.CurrentBetLabelTxt);
+            this.Controls.Add(this.PickBetLablel);
             this.Controls.Add(this.labelforDealer);
             this.Controls.Add(this.labelDealerScore);
             this.Controls.Add(this.picPlayerCard10);
@@ -384,5 +422,8 @@
     private System.Windows.Forms.Label labelforDealer;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Button nextRoundButton;
-  }
+        private System.Windows.Forms.Label PickBetLablel;
+        private System.Windows.Forms.Label CurrentBetLabelTxt;
+        private System.Windows.Forms.Label MoneyLabel;
+    }
 }
