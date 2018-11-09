@@ -96,10 +96,11 @@ namespace StupidBlackjackSln
         }
         private void NextRound()
         {
+            label2.Text = "Round" + currentRound;
+            nextRoundButton.Visible = false;
             currentRound += 1;
             currentCard = 0;
             picPlayerCards = null;
-
             deck = new Deck(FindBitmap);
             player1 = new BlackjackPlayer();
             player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
@@ -123,7 +124,7 @@ namespace StupidBlackjackSln
             if (player1.Hand.Count() >= 5)
             {
                 freezeLabel.Visible = true;
-                NextRound();
+ 
 
 
 
@@ -139,14 +140,14 @@ namespace StupidBlackjackSln
                     if (player1.Score > 21)
                     {
                         freezeLabel.Visible = true;
-                        NextRound();
+
 
                     }
                 }
                 else if (player1.Score > 21)
                 {
                     freezeLabel.Visible = true;
-                    NextRound();
+
 
 
 
@@ -223,6 +224,11 @@ namespace StupidBlackjackSln
         private void picPlayerCard5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void nextRoundButton_Click(object sender, EventArgs e)
+        {
+            NextRound();
         }
     }
 }
