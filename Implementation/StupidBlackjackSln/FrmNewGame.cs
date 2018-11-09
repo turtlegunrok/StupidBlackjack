@@ -18,10 +18,6 @@ namespace StupidBlackjackSln
     private Deck deck;
     private Player player1;
     private Bot dealer;
-    private Bot Bot1;
-    private Bot Bot2;
-    private Bot Bot3;
-    private Bot Bot4;
     private PictureBox[] picPlayerCards;
     private PictureBox[] picDealerCards;
     public int currentCard;
@@ -97,10 +93,6 @@ namespace StupidBlackjackSln
       currentCard = 0;
       deck = new Deck(FindBitmap);
       dealer = new BlackjackBot();
-      Bot1 = new BlackjackBot();
-      Bot2 = new BlackjackBot();
-      Bot3 = new BlackjackBot();
-      Bot4 = new BlackjackBot();
       player1 = new BlackjackPlayer();
       dealer.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
       player1.giveHand(new List<Card>() { deck.dealCard(), deck.dealCard() });
