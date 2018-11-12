@@ -17,7 +17,7 @@ namespace StupidBlackjackSln {
         public frmTitle()
     {
       InitializeComponent();
-      musicplayer.URL = "bensound-thelounge";
+      musicplayer.URL = "bensound-thelounge.mp3";
     }
 
     private void Form1_Load(object sender, EventArgs e)

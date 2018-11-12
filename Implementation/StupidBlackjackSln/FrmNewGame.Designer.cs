@@ -166,6 +166,7 @@
             // 
             this.lblPlayerScore.AutoSize = true;
             this.lblPlayerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerScore.ForeColor = System.Drawing.Color.MistyRose;
             this.lblPlayerScore.Location = new System.Drawing.Point(435, 162);
             this.lblPlayerScore.Name = "lblPlayerScore";
             this.lblPlayerScore.Size = new System.Drawing.Size(105, 37);
@@ -206,6 +207,7 @@
             // 
             this.CurrentBetLabel.AutoSize = true;
             this.CurrentBetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBetLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.CurrentBetLabel.Location = new System.Drawing.Point(797, 304);
             this.CurrentBetLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CurrentBetLabel.Name = "CurrentBetLabel";
@@ -217,6 +219,7 @@
             // 
             this.BetAmountLabel.AutoSize = true;
             this.BetAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BetAmountLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BetAmountLabel.Location = new System.Drawing.Point(797, 372);
             this.BetAmountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BetAmountLabel.Name = "BetAmountLabel";
@@ -274,6 +277,7 @@
             // 
             this.labelDealerScore.AutoSize = true;
             this.labelDealerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDealerScore.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelDealerScore.Location = new System.Drawing.Point(4, 60);
             this.labelDealerScore.Name = "labelDealerScore";
             this.labelDealerScore.Size = new System.Drawing.Size(105, 37);
@@ -285,6 +289,7 @@
             // 
             this.labelforDealer.AutoSize = true;
             this.labelforDealer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelforDealer.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelforDealer.Location = new System.Drawing.Point(4, 23);
             this.labelforDealer.Name = "labelforDealer";
             this.labelforDealer.Size = new System.Drawing.Size(107, 33);
@@ -295,6 +300,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(435, 388);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 37);
@@ -317,6 +323,7 @@
             // 
             this.PickBetLablel.AutoSize = true;
             this.PickBetLablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickBetLablel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PickBetLablel.Location = new System.Drawing.Point(699, 211);
             this.PickBetLablel.Name = "PickBetLablel";
             this.PickBetLablel.Size = new System.Drawing.Size(196, 24);
@@ -327,6 +334,7 @@
             // 
             this.CurrentBetLabelTxt.AutoSize = true;
             this.CurrentBetLabelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBetLabelTxt.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.CurrentBetLabelTxt.Location = new System.Drawing.Point(780, 280);
             this.CurrentBetLabelTxt.Name = "CurrentBetLabelTxt";
             this.CurrentBetLabelTxt.Size = new System.Drawing.Size(115, 24);
@@ -338,6 +346,7 @@
             // 
             this.MoneyLabel.AutoSize = true;
             this.MoneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneyLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MoneyLabel.Location = new System.Drawing.Point(780, 340);
             this.MoneyLabel.Name = "MoneyLabel";
             this.MoneyLabel.Size = new System.Drawing.Size(56, 24);
