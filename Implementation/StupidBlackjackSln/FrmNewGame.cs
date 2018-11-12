@@ -23,6 +23,8 @@ namespace StupidBlackjackSln
     public int currentCard;
     public int currentRound;
     public int starting_money;
+    public int current_money;
+    public int current_bet;
 
     public FrmNewGame()
     {
@@ -99,8 +101,10 @@ namespace StupidBlackjackSln
       showHand_Dealer();
       showHand();
       starting_money = 1000;
+      current_money = 1000;
+      current_bet = 0;
       BetAmountLabel.Text = starting_money.ToString();
-      CurrentBetLabel.Text = 0.ToString();
+      CurrentBetLabel.Text = current_bet.ToString();
     }
     private void showHand_Dealer()
     {
@@ -137,12 +141,16 @@ namespace StupidBlackjackSln
           {
             freezeLabel.Visible = true;
             nextRoundButton.Visible = true;
+            //current_money = current_money - current_bet;
+            CurrentBetLabel.Text = 0.ToString();
+            //BetAmountLabel.Text = current_money.ToString();
           }
         }
         else if (player1.Score > 21)
         {
           freezeLabel.Visible = true;
           nextRoundButton.Visible = true;
+          CurrentBetLabel.Text = 0.ToString();
         }
       }
     }
@@ -181,8 +189,6 @@ namespace StupidBlackjackSln
       showHand();
             showHand_Dealer();
             timer1.Start();
-
-
     }
 
     private void btnStand_Click(object sender, EventArgs e)
@@ -192,16 +198,23 @@ namespace StupidBlackjackSln
             {
                 winLabel.Visible = true;
                 nextRoundButton.Visible = true;
+                current_money = current_money + current_bet*2;
+                CurrentBetLabel.Text = 0.ToString();
+                BetAmountLabel.Text = current_money.ToString();
             }
             else if (dealer.Score > 21)
             {
                 winLabel.Visible = true;
                 nextRoundButton.Visible = true;
+                current_money = current_money + current_bet*2;
+                CurrentBetLabel.Text = 0.ToString();
+                BetAmountLabel.Text = current_money.ToString();
             }
             else 
             {
                 freezeLabel.Visible = true;
                 nextRoundButton.Visible = true;
+                CurrentBetLabel.Text = 0.ToString();
             }
     }
 
@@ -234,7 +247,7 @@ namespace StupidBlackjackSln
                 if (dealer.Score < 16)
                 {
                     dealer.giveCard(deck.dealCard());
-                }
+                    }
                 else
                 {
                     done = true;
@@ -242,7 +255,8 @@ namespace StupidBlackjackSln
                 showHand_Dealer();
             }
       showHand_Dealer();
-    }
+            //labelDealerScore.Text = dealer.Score.ToString();
+        }
 
     private void lblPlayerScore_Click(object sender, EventArgs e)
     {
@@ -258,12 +272,12 @@ namespace StupidBlackjackSln
     {
             CurrentBetLabel.Text = 0.ToString();
             string var;
-            int currentbet;
+            //int currentbet;
             var = Bets.Text;
-            currentbet = Convert.ToInt32(Bets.Text);
-            starting_money = starting_money - currentbet;
+            current_bet = Convert.ToInt32(Bets.Text);
+            current_money = current_money - current_bet;
             CurrentBetLabel.Text = var.ToString();
-            BetAmountLabel.Text = starting_money.ToString();
+            BetAmountLabel.Text = current_money.ToString();
         }
 
     private void label2_Click(object sender, EventArgs e)

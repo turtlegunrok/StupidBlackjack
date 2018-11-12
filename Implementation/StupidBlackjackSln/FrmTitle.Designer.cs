@@ -84,6 +84,7 @@
             this.btnOptions.TabIndex = 4;
             this.btnOptions.Text = "Options";
             this.btnOptions.UseVisualStyleBackColor = true;
+            //this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             // 
             // frmTitle
             // 
