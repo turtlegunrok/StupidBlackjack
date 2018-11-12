@@ -152,6 +152,8 @@ namespace StupidBlackjackSln
       currentRound += 1;
       label2.Text = "Round:" + currentRound.ToString();
       nextRoundButton.Visible = false;
+      freezeLabel.Visible = false;
+      winLabel.Visible = false;
       currentCard = 0;
             picPlayerCards = null;
       deck = new Deck(FindBitmap);
